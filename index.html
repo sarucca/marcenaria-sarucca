@@ -40,7 +40,7 @@
             align-items: center;
         }
 
-        /* Esfera com a Logo */
+        /* Esfera com a Imagem Real da Logo */
         .logo-sphere {
             width: 110px;
             height: 110px;
@@ -56,11 +56,10 @@
             position: relative;
         }
 
-        /* Ícone SVG vetorizado do símbolo 'SR' da logo oficial */
-        .logo-symbol {
-            width: 65px;
-            height: 65px;
-            fill: #c8b393;
+        .logo-sphere img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .profile h1 {
@@ -99,14 +98,13 @@
             gap: 6px;
         }
 
-        /* Destaque para Avaliações */
         .stars {
             color: #ffc107;
             font-size: 0.85rem;
             margin-bottom: 15px;
         }
 
-        /* Container de Links */
+        /* Container de Links Úteis e Diretos */
         .links {
             display: flex;
             flex-direction: column;
@@ -146,7 +144,7 @@
             box-shadow: 0 6px 20px rgba(200, 179, 147, 0.25);
         }
 
-        /* Botão Principal WhatsApp (Verde Oficial) */
+        /* Botão Principal WhatsApp */
         .link-card.whatsapp {
             background: #25d366;
             color: #ffffff;
@@ -163,7 +161,7 @@
             box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
         }
 
-        /* Cards Informativos (Para o design não ficar "seco") */
+        /* Elementos Decorativos / Informativos (Sem Links) */
         .info-cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -172,8 +170,8 @@
         }
 
         .info-box {
-            background: rgba(43, 54, 68, 0.5);
-            border: 1px dashed rgba(200, 179, 147, 0.3);
+            background: rgba(43, 54, 68, 0.4);
+            border: 1px dashed rgba(200, 179, 147, 0.25);
             border-radius: 10px;
             padding: 12px 8px;
             font-size: 0.78rem;
@@ -203,13 +201,11 @@
 
     <div class="container">
         
-        <!-- Cabeçalho com Logo em Esfera -->
+        <!-- Cabeçalho com a Tua Logo Real -->
         <div class="profile">
             <div class="logo-sphere">
-                <!-- Símbolo Vetorizado Oficial SR da Marcenaria Sarucca -->
-                <svg class="logo-symbol" viewBox="0 0 100 100">
-                    <path d="M 20,20 L 70,20 C 80,20 85,27 85,37 C 85,47 80,52 70,52 L 45,52 L 75,80 L 60,80 L 32,54 L 32,80 L 20,80 Z M 32,32 L 32,41 L 65,41 C 70,41 72,39 72,365 C 72,34 70,32 65,32 Z"/>
-                </svg>
+                <!-- Imagem oficial enviada por ti -->
+                <img src="https://lh3.googleusercontent.com/chat_attachment/AEjO8rSD_4Xj48l6dE36P1_C7Xv5EaK21n4qTOn03R-y_j4fEAtc0m-_tTq8P1s0C5Zl5e40=w1024" alt="Marcenaria Sarucca Logo">
             </div>
             
             <h1>Marcenaria Sarucca</h1>
@@ -230,7 +226,7 @@
             </div>
         </div>
 
-        <!-- Links Principais -->
+        <!-- Links Limpos e Diretos -->
         <div class="links">
             
             <!-- WhatsApp Oficial Corrigido -->
@@ -245,18 +241,6 @@
                 Visitar Nosso Site Oficial
             </a>
 
-            <!-- Nossos Diferenciais -->
-            <a href="https://marcenariasarucca.com.br/#diferenciais" class="link-card" target="_blank">
-                <i class="fa-solid fa-couch"></i>
-                Nossos Diferenciais & Projetos
-            </a>
-
-            <!-- Condições de Pagamento -->
-            <a href="https://marcenariasarucca.com.br/#faq" class="link-card" target="_blank">
-                <i class="fa-solid fa-credit-card"></i>
-                Até 18x no Cartão / 10x no Boleto
-            </a>
-
             <!-- Localização da Fábrica -->
             <a href="https://maps.google.com/?q=Rua+Eldorado+161+Carapicuiba" class="link-card" target="_blank">
                 <i class="fa-solid fa-location-dot"></i>
@@ -265,7 +249,7 @@
 
         </div>
 
-        <!-- Blocos de Informações Complementares (Enriquecem o visual) -->
+        <!-- Blocos Apenas Decorativos e Informativos -->
         <div class="info-cards">
             <div class="info-box">
                 <i class="fa-solid fa-shield-halved"></i>
