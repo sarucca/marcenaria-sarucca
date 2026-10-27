@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marcenaria Sarucca | Links e Contatos</title>
-    <!-- Ícones via FontAwesome -->
+    <title>Marcenaria Sarucca | Links Oficiais</title>
+    <!-- Ícones FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -16,66 +16,102 @@
         }
 
         body {
-            background-color: #121212;
+            background-color: #232c37;
+            background-image: radial-gradient(circle at top, #344354 0%, #1c242e 100%);
             color: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 25px 15px;
         }
 
         .container {
             width: 100%;
-            max-width: 420px;
+            max-width: 440px;
             text-align: center;
         }
 
-        /* Perfil / Marca */
+        /* Perfil e Identidade Visual */
         .profile {
             margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .profile-img {
-            width: 100px;
-            height: 100px;
+        /* Esfera com a Logo */
+        .logo-sphere {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            border: 3px solid #d4af37; /* Detalhe dourado/amadeirado */
-            object-fit: cover;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            background-color: #2b3644;
+            border: 3px solid #c8b393;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Ícone SVG vetorizado do símbolo 'SR' da logo oficial */
+        .logo-symbol {
+            width: 65px;
+            height: 65px;
+            fill: #c8b393;
         }
 
         .profile h1 {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
             letter-spacing: 1px;
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            color: #ffffff;
         }
 
         .profile p {
-            font-size: 0.9rem;
-            color: #b0b0b0;
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #c8b393;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .badges-row {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
         .badge {
-            display: inline-block;
-            background-color: #1e1e1e;
-            border: 1px solid #333;
-            color: #d4af37;
-            font-size: 0.8rem;
-            padding: 4px 12px;
+            background: rgba(200, 179, 147, 0.12);
+            border: 1px solid #c8b393;
+            color: #f0e6d6;
+            font-size: 0.78rem;
+            padding: 5px 14px;
             border-radius: 20px;
             font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        /* Lista de Links */
+        /* Destaque para Avaliações */
+        .stars {
+            color: #ffc107;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        /* Container de Links */
         .links {
             display: flex;
             flex-direction: column;
             gap: 14px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
 
         .link-card {
@@ -83,38 +119,39 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: #1e1e1e;
+            background: rgba(43, 54, 68, 0.85);
+            backdrop-filter: blur(5px);
             color: #ffffff;
             text-decoration: none;
             padding: 16px 20px;
-            border-radius: 12px;
+            border-radius: 14px;
             font-weight: 600;
             font-size: 0.95rem;
-            border: 1px solid #2a2a2a;
+            border: 1px solid rgba(200, 179, 147, 0.3);
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         }
 
         .link-card i {
             position: absolute;
             left: 20px;
-            font-size: 1.2rem;
-            color: #d4af37;
+            font-size: 1.25rem;
+            color: #c8b393;
         }
 
-        /* Efeito de destaque no passar do mouse / toque */
         .link-card:hover {
             transform: translateY(-3px);
-            background: #282828;
-            border-color: #d4af37;
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.2);
+            background: #344354;
+            border-color: #c8b393;
+            box-shadow: 0 6px 20px rgba(200, 179, 147, 0.25);
         }
 
-        /* Botão Destaque WhatsApp */
+        /* Botão Principal WhatsApp (Verde Oficial) */
         .link-card.whatsapp {
             background: #25d366;
             color: #ffffff;
             border: none;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
         }
 
         .link-card.whatsapp i {
@@ -123,77 +160,129 @@
 
         .link-card.whatsapp:hover {
             background: #20ba5a;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 6px 22px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Cards Informativos (Para o design não ficar "seco") */
+        .info-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .info-box {
+            background: rgba(43, 54, 68, 0.5);
+            border: 1px dashed rgba(200, 179, 147, 0.3);
+            border-radius: 10px;
+            padding: 12px 8px;
+            font-size: 0.78rem;
+            color: #d1d5db;
+        }
+
+        .info-box i {
+            color: #c8b393;
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
 
         /* Rodapé */
         .footer {
             font-size: 0.75rem;
-            color: #666666;
+            color: #a0aec0;
+            line-height: 1.5;
         }
 
-        .footer a {
-            color: #888888;
-            text-decoration: none;
+        .footer strong {
+            color: #c8b393;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Cabeçalho / Perfil -->
+        
+        <!-- Cabeçalho com Logo em Esfera -->
         <div class="profile">
-            <!-- Substitua a URL abaixo pela foto da logo ou da marcenaria -->
-            <img src="https://marcenariasarucca.com.br/wp-content/uploads/2023/logo.png" alt="Marcenaria Sarucca" class="profile-img" onerror="this.src='https://via.placeholder.com/100/1e1e1e/d4af37?text=Sarucca'">
+            <div class="logo-sphere">
+                <!-- Símbolo Vetorizado Oficial SR da Marcenaria Sarucca -->
+                <svg class="logo-symbol" viewBox="0 0 100 100">
+                    <path d="M 20,20 L 70,20 C 80,20 85,27 85,37 C 85,47 80,52 70,52 L 45,52 L 75,80 L 60,80 L 32,54 L 32,80 L 20,80 Z M 32,32 L 32,41 L 65,41 C 70,41 72,39 72,365 C 72,34 70,32 65,32 Z"/>
+                </svg>
+            </div>
+            
             <h1>Marcenaria Sarucca</h1>
             <p>Móveis Planejados Sob Medida</p>
-            <span class="badge"><i class="fa-solid fa-award"></i> 15 Anos de Tradição</span>
+
+            <div class="badges-row">
+                <span class="badge"><i class="fa-solid fa-award"></i> 15 Anos de Tradição</span>
+                <span class="badge"><i class="fa-solid fa-industry"></i> Fabricação Própria</span>
+            </div>
+
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span style="color: #ffffff; font-size: 0.75rem; margin-left: 5px;">(5.0 no Google)</span>
+            </div>
         </div>
 
-        <!-- Links Principais (Mini Site / Media Kit) -->
+        <!-- Links Principais -->
         <div class="links">
             
-            <!-- WhatsApp (Principal) -->
-            <a href="https://wa.me/5511956600519?text=Ol%C3%A1!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." class="link-card whatsapp" target="_blank">
+            <!-- WhatsApp Oficial Corrigido -->
+            <a href="https://wa.me/5511976101171?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20m%C3%B3veis%20planejados." class="link-card whatsapp" target="_blank">
                 <i class="fa-brands fa-whatsapp"></i>
                 Solicitar Orçamento no WhatsApp
             </a>
 
             <!-- Site Oficial -->
-            <a href="https://marcenariasarucca.com.br/" class="link-card">
+            <a href="https://marcenariasarucca.com.br/" class="link-card" target="_blank">
                 <i class="fa-solid fa-globe"></i>
                 Visitar Nosso Site Oficial
             </a>
 
-            <!-- Portfólio / Projetos -->
-            <a href="https://marcenariasarucca.com.br/#diferenciais" class="link-card">
+            <!-- Nossos Diferenciais -->
+            <a href="https://marcenariasarucca.com.br/#diferenciais" class="link-card" target="_blank">
                 <i class="fa-solid fa-couch"></i>
                 Nossos Diferenciais & Projetos
             </a>
 
-            <!-- Catálogo / Condições de Pagamento -->
-            <a href="https://marcenariasarucca.com.br/#faq" class="link-card">
+            <!-- Condições de Pagamento -->
+            <a href="https://marcenariasarucca.com.br/#faq" class="link-card" target="_blank">
                 <i class="fa-solid fa-credit-card"></i>
-                Até 18x no Cartão / 10x Boleto
+                Até 18x no Cartão / 10x no Boleto
             </a>
 
-            <!-- Localização Google Maps -->
-            <a href="https://maps.google.com/?q=Rua+Eldorado+161+Carapicuiba" target="_blank" class="link-card">
+            <!-- Localização da Fábrica -->
+            <a href="https://maps.google.com/?q=Rua+Eldorado+161+Carapicuiba" class="link-card" target="_blank">
                 <i class="fa-solid fa-location-dot"></i>
                 Nossa Fábrica em Carapicuíba
             </a>
 
-            <a href="https://maps.google.com/?q=Rua+Adelino+Cardana+293+Barueri" target="_blank" class="link-card">
-                <i class="fa-solid fa-building"></i>
-                Escritório em Barueri / Bethaville
-            </a>
+        </div>
 
+        <!-- Blocos de Informações Complementares (Enriquecem o visual) -->
+        <div class="info-cards">
+            <div class="info-box">
+                <i class="fa-solid fa-shield-halved"></i>
+                <strong>Garantia de Qualidade</strong><br>1 ano de garantia de fábrica
+            </div>
+            <div class="info-box">
+                <i class="fa-solid fa-truck-fast"></i>
+                <strong>Atendimento</strong><br>São Paulo e Grande SP
+            </div>
         </div>
 
         <!-- Rodapé -->
         <div class="footer">
-            <p>© Marcenaria Sarucca · Todos os direitos reservados</p>
+            <p><strong>Marcenaria Sarucca</strong> · Todos os direitos reservados</p>
+            <p style="margin-top: 4px; opacity: 0.7;">Rua Eldorado, 161 - Carapicuíba/SP</p>
         </div>
+
     </div>
 
 </body>
